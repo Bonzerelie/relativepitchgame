@@ -40,11 +40,15 @@ function playNote(fileName) {
 
 // Start or Next Question
 function startGame() {
+    // Hide start button and show the next button when the game starts
+    startBtn.style.display = 'none';
+    nextBtn.style.display = 'block';
+
+    // Reset the previous game data
     if (!answered && currentNote) {
         alert("Please select an answer before moving on!");
         return;
     }
-
     buttonsDiv.classList.remove('hidden');
     resultDiv.textContent = "";
     answered = false;
@@ -62,9 +66,6 @@ function startGame() {
         btn.addEventListener('click', () => makeGuess(note.name));
         choicesDiv.appendChild(btn);
     });
-
-    startBtn.style.display = 'none';  // Hide the Start button
-    nextBtn.style.display = 'block';  // Show the 'Next' button
 }
 
 // Handle guess
@@ -113,8 +114,9 @@ function resetScore() {
     answered = false;
     updateScore();
     resultDiv.textContent = "";
-    startBtn.textContent = "Start";
-    buttonsDiv.classList.add('hidden');
+    startBtn.style.display = 'block';  // Show the Start button
+    nextBtn.style.display = 'none';  // Hide the Next button
+    buttonsDiv.classList.add('hidden');  // Hide the choices and answer buttons
 }
 
 // Event listeners
