@@ -14,10 +14,13 @@
     <div id="buttons" class="hidden">
       <p id="prompt">Which note was played?</p>
       <div id="choices"></div>
+      <button id="nextBtn" style="display:none;">Next</button>
       <button id="replayBtn">Replay Note</button>
     </div>
 
-    <div id="result"></div>
+    <div id="reference">
+      <button id="referenceBtn">Play Reference C4</button>
+    </div>
 
     <div id="score">
       <p>Correct: <span id="correctCount">0</span></p>
@@ -27,9 +30,6 @@
       <button id="resetScoreBtn">Reset</button>
     </div>
 
-    <div id="reference">
-      <button id="referenceBtn">Play Reference C4</button>
-    </div>
   </div>
 
   <script src="script.js"></script>
