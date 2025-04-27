@@ -65,22 +65,8 @@ button:hover {
 #score {
   margin-top: 20px;
   font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-#score p {
-  margin: 5px 0;
-}
-
-#buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#reference {
   margin-top: 20px;
-}
-
-#buttons button {
-  margin: 5px 0;
 }
