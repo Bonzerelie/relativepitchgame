@@ -51,7 +51,7 @@ function startGame() {
 
     // Randomly select a note
     currentNote = notes[Math.floor(Math.random() * notes.length)];
-    playNote(currentNote.file);
+    playNote(currentNote.file);  // Play the note when the game starts
 
     // Generate choice buttons without number prefixes
     choicesDiv.innerHTML = "";
@@ -63,9 +63,8 @@ function startGame() {
         choicesDiv.appendChild(btn);
     });
 
-    startBtn.textContent = "Start";
+    startBtn.style.display = 'none';  // Hide the Start button
     nextBtn.style.display = 'block';  // Show the 'Next' button
-    startBtn.style.display = 'none'; // Hide the 'Start' button
 }
 
 // Handle guess
